@@ -1,4 +1,4 @@
 import React from 'react';
 export default function Contact() {
-  return <div>Contact Page</div>;
+  return <div className='color-white'>Contact Page</div>;
 } 

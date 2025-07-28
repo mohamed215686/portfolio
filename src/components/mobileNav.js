@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './mobileNav.css';
 import { 
   FaHome,
@@ -6,37 +6,31 @@ import {
   FaCode,
   FaEnvelope 
 } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
+
 const MobileNav = () => {
-  const [activeTab, setActiveTab] = useState(0);
   const items = [
-    { label: "Home", icon: <FaHome />, href: "#" },
-    { label: "About", icon: <FaUser />, href: "#" },
-    { label: "Projects", icon: <FaCode />, href: "#" },
-    { label: "Contact", icon: <FaEnvelope />, href: "#" },
+    { label: "Home", icon: <FaHome />, href: "/" },
+    { label: "About", icon: <FaUser />, href: "/about" },
+    { label: "Projects", icon: <FaCode />, href: "/projects" },
+    { label: "Contact", icon: <FaEnvelope />, href: "/contact" },
   ];
 
   return (
     <div className='navigation'>
       <ul>
         {items.map((item, index) => (
-          <li 
-            key={index} 
-            className={activeTab === index ? 'active' : ''}
-            onClick={() => setActiveTab(index)}
-          >
-            <a href={item.href}>
+          <li key={index}>
+            <NavLink
+              to={item.href}
+              className={({ isActive }) => isActive ? 'active' : ''}
+              end={item.href === '/'}
+            >
               <span className='icon'>{item.icon}</span>
               <span className='text'>{item.label}</span>
-            </a>
+            </NavLink>
           </li>
         ))}
-        <div 
-          className='indicator' 
-          style={{ 
-            left: `calc(70px * ${activeTab})`,
-            transition: 'left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
-          }}
-        ></div>
       </ul>
     </div>
   );
