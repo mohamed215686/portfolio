@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./GooeyNav.css";
 
 const GooeyNav = ({
@@ -16,8 +16,10 @@ const GooeyNav = ({
   const navRef = useRef(null);
   const filterRef = useRef(null);
   const textRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
+  const location = useLocation();
 
+  // Find active index based on current route
+  const activeIndex = items.findIndex(item => location.pathname === item.href);
   const noise = (n = 1) => n / 2 - Math.random() * n;
 
   const getXY = (distance, pointIndex, totalPoints) => {
@@ -104,7 +106,6 @@ const GooeyNav = ({
     const liEl = e.currentTarget;
     if (activeIndex === index) return;
 
-    setActiveIndex(index);
     updateEffectPosition(liEl);
 
     if (filterRef.current) {

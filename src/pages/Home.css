@@ -1,39 +1,85 @@
 .home-container {
-  text-align: center;
   padding: 2rem;
-  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  color: #1a1a6a;
   margin-bottom: 1rem;
-  color: #2424a1eb;
 }
 
 .home-intro {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  color: #333;
+  margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
-.home-links {
-  margin-top: 2rem;
+.project-container {
   display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.project-info {
+  flex: 1;
+  position: sticky;
+  top: 2rem;
+}
+
+.project-info h2 {
+  font-size: 2rem;
+  color: #1a1a6a;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card-stack {
+  flex: 2;
+  height: 500px;
+  position: relative;
+}
+
+.card-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
+  align-items: center;
 }
 
-.home-link {
-  padding: 0.75rem 1.5rem;
-  background: #2424a1eb;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+.card-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a6a;
+}
+
+.card-item p {
   font-size: 1rem;
-  transition: background 0.2s;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
 }
 
-.home-link:hover {
-  background: #1a1a6a;
-} 
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+  
+  .project-info {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
