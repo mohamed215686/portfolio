@@ -17,6 +17,11 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <footer className='footer'>
+          <h1>
+            created by mohamed
+          </h1>
+        </footer>
         <MobileNav />
       </div>
     </Router>

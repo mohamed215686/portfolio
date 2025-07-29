@@ -1,7 +1,7 @@
 .home-container {
   padding: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
+  position: relative; 
 }
 
 .home-title {
@@ -16,17 +16,83 @@
   margin-bottom: 3rem;
   line-height: 1.6;
 }
-
+@media (max-width: 768px) {
+  .project-container {
+    padding: 15px;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  .home-intro {
+    font-size: 1rem;
+  }
+}
 .project-container {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  border-radius: 10px;
+  border: 10px solid #1a1a6a;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative; /* Allows z-index */
+  box-sizing: border-box; /* ★ Critical fix ★ */
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Remove fixed height */
+    padding: 20px; /* Keep padding consistent */
+  }
+
+  .project-info {
+    position: static;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%; /* Take full width */
+  }
+
+  .card-stack {
+    display: none;
+  }
+
+  .A {
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .A > div {
+    height: auto !important; /* Remove fixed height */
+    
+  }
 }
 
+/* Update your min-width: 1200px query */
+@media (min-width: 1200px) {
+  .A {
+    display: none;
+  }
+}
+.c{
+  display: flex;
+  background-color: aqua;
+}
 .project-info {
   flex: 1;
-  position: sticky;
+  position: relative;
+  display:block;
   top: 2rem;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .project-info h2 {
@@ -44,7 +110,8 @@
 .card-stack {
   flex: 2;
   height: 500px;
-  position: relative;
+  position: relative; /* Allows z-index */
+  z-index: 0; 
 }
 
 .card-item {

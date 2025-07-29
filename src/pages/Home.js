@@ -2,24 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Home.css';
 import CardSwap, { Card } from './CardSwap';
-
+import Carousel from './Carousel'
 export default function Home() {
   const projects = [
     { label: 'Project 1', description: 'Description for project 1' },
     { label: 'Project 2', description: 'Description for project 2' },
     { label: 'Project 3', description: 'Description for project 3' },
-    { label: 'Project 4', description: 'Description for project 4' }
   ];
 
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentProjectIndex(prev => (prev + 1) % projects.length);
-    }, 5000); 
-  
-    return () => clearInterval(interval);
-  }, [projects.length]);
+ 
 
   return (
     <div className="home-container">
@@ -50,21 +41,37 @@ export default function Home() {
           >
             
               <Card className="card-item">
-                <h3>{ projects[currentProjectIndex % projects.length].label}</h3>
-                <p>{ projects[currentProjectIndex % projects.length].description}</p>
+                <h3>{ projects[0].label}</h3>
+                <p>{ projects[0].description}</p>
               </Card>
               <Card className="card-item">
-                <h3>{ projects[(currentProjectIndex + 1) % projects.length].label}</h3>
-                <p>{ projects[(currentProjectIndex + 1) % projects.length].description}</p>
+                <h3>{ projects[1].label}</h3>
+                <p>{ projects[1].description}</p>
               </Card>
               <Card className="card-item">
-                <h3>{ projects[(currentProjectIndex + 2) % projects.length].label}</h3>
-                <p>{ projects[(currentProjectIndex + 2) % projects.length].description}</p>
+                <h3>{ projects[2].label}</h3>
+                <p>{ projects[2].description}</p>
               </Card>
             
           </CardSwap>
         </div>
+        <div className='A'>
+        <div style={{ height: '600px', position: 'relative' }}>
+          <Carousel
+            baseWidth={300}
+            autoplay={true}
+            autoplayDelay={3000}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          />
+        </div>
+        </div>
+        
       </div>
+      <div className='c'>
+          hi
+        </div>
     </div>
   );
 }
