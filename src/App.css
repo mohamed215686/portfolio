@@ -1,4 +1,37 @@
 .App {
   text-align: center;
-  background-color: #18181b;
+  background: linear-gradient(
+    to bottom right,
+    #000000,
+    
+    #0f172a,
+    
+    #000000
+  );
+}
+.footer{
+  width: 100%;
+  padding: 0.5rem 0; 
+  text-align: center;
+  background-color: #000;
+  background: linear-gradient(
+    to bottom ,
+    #02028d,
+    #000000,
+    #000000,
+    #02028d
+  );
+}
+
+@media (max-width: 1200px) {
+  .footer{
+    
+    margin-bottom: 80px;
+
+}  
+}
+.credit {
+  color: #02028d;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }

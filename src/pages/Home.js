@@ -3,6 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import './Home.css';
 import CardSwap, { Card } from './CardSwap';
 import Carousel from './Carousel'
+import '../components/ShinyText'
+import ShinyText from '../components/ShinyText';
 export default function Home() {
   const projects = [
     { label: 'Project 1', description: 'Description for project 1' },
@@ -14,7 +16,13 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to My Portfolio</h1>
+      <h1 className="N">
+      <ShinyText
+              text="Welcome to My Portfolio" 
+              disabled={false} 
+              speed={3} 
+              className='home-title' 
+            /></h1>
       <p className="home-intro">
         Hi, I'm Mohamed Afkir. I'm a passionate developer eager to build impactful digital experiences. 
         Explore my work, learn more about me, or get in touch!
@@ -22,10 +30,10 @@ export default function Home() {
 
       <div className='project-container'>
         <div className='project-info'>
-          <div>Projects</div>
+          <div className='P'>Some of my Projects</div>
           <NavLink
               to="/projects"
-              className={({ isActive }) => isActive ? 'active' : ''}
+              className='link-P'
               end={"/projects"=== '/'}
             >
               View All Projects
@@ -40,22 +48,16 @@ export default function Home() {
             pauseOnHover={false}
           >
             
-              <Card className="card-item">
-                <h3>{ projects[0].label}</h3>
-                <p>{ projects[0].description}</p>
+            {projects.map((project, index) => (
+              <Card key={index} className="card-item">
+                <h3>{project.label}</h3>
+                <p>{project.description}</p>
               </Card>
-              <Card className="card-item">
-                <h3>{ projects[1].label}</h3>
-                <p>{ projects[1].description}</p>
-              </Card>
-              <Card className="card-item">
-                <h3>{ projects[2].label}</h3>
-                <p>{ projects[2].description}</p>
-              </Card>
+            ))}
             
           </CardSwap>
         </div>
-        <div className='A'>
+        <div className='card-mobile'>
         <div style={{ height: '600px', position: 'relative' }}>
           <Carousel
             baseWidth={300}

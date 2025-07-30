@@ -18,7 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <footer className='footer'>
-          <h1>
+          <h1 className='credit'>
             created by mohamed
           </h1>
         </footer>
