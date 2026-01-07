@@ -3,14 +3,14 @@ import { Button } from '@/components/ui/button';
 
 const projects = [
   {
-    title: 'AOSmovies',
+    title: 'AOSmovies Web Application',
     description: 'A movie discovery web application built with JavaScript. Browse and search for your favorite movies with an intuitive interface.',
     tech: ['JavaScript', 'HTML', 'CSS', 'API'],
     github: 'https://github.com/mohamed215686/AOSmovies',
     featured: true,
   },
   {
-    title: 'DB Hotel',
+    title: 'Hotel Management Database System',
     description: 'A comprehensive hotel management database system designed to streamline room bookings, guest records, and billing operations.',
     tech: ['SQL', 'Database Design', 'Backend', 'Data Management'],
     github: 'https://github.com/mohamed215686/dbhotel',
@@ -21,13 +21,6 @@ const projects = [
     description: 'My first machine learning project exploring data analysis and predictive modeling using Python and Jupyter Notebooks.',
     tech: ['Python', 'Jupyter', 'ML', 'Data Analysis'],
     github: 'https://github.com/mohamed215686/first_ML_project',
-    featured: true,
-  },
-  {
-    title: 'Shop Website',
-    description: 'An e-commerce website project demonstrating web development skills with modern JavaScript.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-    github: 'https://github.com/mohamed215686/shope_website',
     featured: false,
   },
   {
@@ -37,6 +30,13 @@ const projects = [
     github: 'https://github.com/mohamed215686/test-project-iot-watch',
     featured: false,
   },
+  {
+    title: 'Portfolio Website',
+    description: 'My personal portfolio website showcasing my projects, skills, and experience as a developer.',
+    tech: ['React', 'TypeScript', 'CSS'],
+    github: 'https://github.com/mohamed215686/portfolio',
+    featured: true,
+  }
 ];
 
 const ProjectsSection = () => {

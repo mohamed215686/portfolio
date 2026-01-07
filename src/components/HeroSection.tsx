@@ -1,6 +1,7 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.png';
+
 
 const HeroSection = () => {
   return (
@@ -50,6 +51,12 @@ const HeroSection = () => {
               <Button variant="heroOutline" size="lg" asChild>
                 <a href="#contact">Contact Me</a>
               </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="/mohamed_CV.pdf" download="Mohamed_Afkir_Resume.pdf">
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </a>
+              </Button>
             </div>
 
             {/* Social Links */}
@@ -69,7 +76,7 @@ const HeroSection = () => {
                 <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="https://www.linkedin.com/in/mohamed-afkir"
+                href="https://www.linkedin.com/in/mohamed-afkir-974520330/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-secondary/50 border border-border hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group"
