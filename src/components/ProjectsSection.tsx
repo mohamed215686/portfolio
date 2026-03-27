@@ -17,11 +17,11 @@ const projects = [
     featured: true,
   },
   {
-    title: 'First ML Project',
-    description: 'My first machine learning project exploring data analysis and predictive modeling using Python and Jupyter Notebooks.',
-    tech: ['Python', 'Jupyter', 'ML', 'Data Analysis'],
-    github: 'https://github.com/mohamed215686/first_ML_project',
-    featured: false,
+    title: 'Pneumonia Detection from Chest X-Rays',
+    description: 'This project is a Deep Learning model built to automatically detect and classify pneumonia from chest X-ray images.',
+    tech: ['Python', 'Jupyter', 'OpenCV','Keras', 'TensorFlow' ,'Kaggle Notebooks'],
+    github: 'https://github.com/mohamed215686/Pneumonia_check_model',
+    featured: true,
   },
   {
     title: 'IoT Watch Project',
@@ -35,7 +35,7 @@ const projects = [
     description: 'My personal portfolio website showcasing my projects, skills, and experience as a developer.',
     tech: ['React', 'TypeScript', 'CSS'],
     github: 'https://github.com/mohamed215686/portfolio',
-    featured: true,
+    featured: false,
   }
 ];
 
