@@ -98,11 +98,17 @@ const HeroSection = () => {
                 />
               </div>
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 px-4 py-2 glass rounded-xl animate-float">
+              <div className="absolute -top-4 -right-4 px-4 py-2 glass rounded-xl animate-float " style={{ animationDelay: '-2s' }}>
                 <span className="code-font text-sm text-primary">Python</span>
               </div>
               <div className="absolute -bottom-4 -left-4 px-4 py-2 glass rounded-xl animate-float" style={{ animationDelay: '-2s' }}>
                 <span className="code-font text-sm text-accent">ML/AI</span>
+              </div>
+              <div className="absolute -top-4 -left-4 px-4 py-2 glass rounded-xl animate-float" style={{ animationDelay: '-2s' }}>
+                <span className="code-font text-sm text-accent">SQL</span>
+              </div>
+              <div className="absolute -bottom-4 -right-4 px-4 py-2 glass rounded-xl animate-float" style={{ animationDelay: '-2s' }}>
+                <span className="code-font text-sm text-accent">DB</span>
               </div>
             </div>
           </div>

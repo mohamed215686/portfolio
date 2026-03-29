@@ -72,7 +72,7 @@ const AboutSection = () => {
               <div className="text-muted-foreground text-sm">Projects</div>
             </div>
             <div className="gradient-border p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold gradient-text mb-2">5+</div>
+              <div className="text-4xl font-bold gradient-text mb-2">10+</div>
               <div className="text-muted-foreground text-sm">Technologies</div>
             </div>
             <div className="gradient-border p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">

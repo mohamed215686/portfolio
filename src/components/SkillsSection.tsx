@@ -14,7 +14,7 @@ const skills = [
   {
     category: 'Machine Learning',
     icon: Brain,
-    items: ['Scikit-learn', 'TensorFlow Basics', 'Model Training', 'Data Analysis'],
+    items: ['Scikit-learn', 'TensorFlow Basics','Keras', 'Model Training', 'Data Analysis'],
   },
   {
     category: 'Math & Statistics',
@@ -35,8 +35,8 @@ const skills = [
 
 const languages = [
   { name: 'Arabic', level: 'Native', percent: 100 },
-  { name: 'French', level: 'Good', percent: 75 },
-  { name: 'English', level: 'Good', percent: 75 },
+  { name: 'French', level: 'Good', percent: 70 },
+  { name: 'English', level: 'Good', percent: 70 },
 ];
 
 const SkillsSection = () => {
